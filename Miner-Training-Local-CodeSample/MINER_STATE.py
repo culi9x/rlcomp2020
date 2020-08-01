@@ -105,9 +105,14 @@ class State:
         self.mapInfo.init_map(game_info["gameinfo"])
         self.stepCount = 0
         self.status = State.STATUS_PLAYING
-        self.players = [{"playerId": 2, "posx": self.x, "posy": self.y},
-                        {"playerId": 3, "posx": self.x, "posy": self.y},
-                        {"playerId": 4, "posx": self.x, "posy": self.y}]
+        self.players = [{"playerId": 1, "posx": self.x, "posy": self.y, 
+                         "energy":50, "score":0, "lastAction":None, "status":0},
+                        {"playerId": 2, "posx": self.x, "posy": self.y, 
+                         "energy":50, "score":0, "lastAction":None, "status":0},
+                        {"playerId": 3, "posx": self.x, "posy": self.y, 
+                         "energy":50, "score":0, "lastAction":None, "status":0},
+                        {"playerId": 4, "posx": self.x, "posy": self.y, 
+                         "energy":50, "score":0, "lastAction":None, "status":0}]
 
     def update_state(self, data):
         new_state = str_2_json(data)
